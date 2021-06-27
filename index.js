@@ -160,3 +160,31 @@ $(document).ready(function(){
         console.log("Your total bills is sh. "+checkoutTotal);
         $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
       });
+
+      $("button#deliver").click(function(){
+        $("#pickUp").hide();
+        $(".deliveryForm").show();
+      })
+  
+  
+  
+      $("button#pickUp").click(function(){
+        alert("Your are welcome to pick up your order in 10 minutes and have ksh" + checkoutTotal + " to pay for the pizza");
+        $("button#pickUp").hide();
+        $("button#deliver").hide();
+        //reloads the page
+        location.reload();
+  
+  
+      })
+  
+      $("button#goDeliver").click(function(){
+        $("#notify").show();
+        var owner = document.getElementById("ownerOrder").value;
+        var location = document.getElementById("ownerLocation").value;
+        alert("Hey " + owner + " ,your order has been received and will be delivered to " + location + ". Be ready with ksh" + checkoutTotal + " and ksh100 for the delivery fee!!" );
+      })
+  
+  
+    })
+  })
