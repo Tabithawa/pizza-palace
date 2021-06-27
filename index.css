@@ -47,3 +47,6 @@ img{
     color: orange;
     font-weight: bolder;
 }
+table, th, td {
+    border: 1px solid white;
+}
