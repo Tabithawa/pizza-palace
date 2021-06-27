@@ -1,9 +1,9 @@
 $(document).ready(function(){
   
     //ORDER BUTTON
-    $("button.order").click(function(event){
-      $("button.order").hide();
-      $("#partTwo").show();
+    $("button#order").click(function(event){
+      $("button#order").hide();
+      $("#orderPart").show();
       var pizzaType = $("#pizzaName option:selected").val();
       var pizzaSize = $("#size option:selected").val();
       var pizzaCrust = $("#crust option:selected").val();
@@ -67,10 +67,10 @@ $(document).ready(function(){
   
   
       event.preventDefault();
-      document.getElementById("pizzaname").innerHTML = pizzaType;
-      document.getElementById("pizzasize").innerHTML = pizzaSize;
-      document.getElementById("pizzacrust").innerHTML = pizzaCrust;
-      document.getElementById("pizzatopping").innerHTML = pizzaTopping;
+      document.getElementById("nameOfPizza").innerHTML = pizzaType;
+      document.getElementById("sizeOfPizza").innerHTML = pizzaSize;
+      document.getElementById("crustOfPizza").innerHTML = pizzaCrust;
+      document.getElementById("toppingOfPizza").innerHTML = pizzaTopping;
       document.getElementById("totals").innerHTML = checkoutTotal;
 
           //ADD PIZZA BUTTON AND ITS OWN DATA
@@ -147,7 +147,7 @@ $(document).ready(function(){
     
           var newOrder = new Getpizza(pizzaType, pizzaSize, pizzaCrust,pizzaTopping,total);
           event.preventDefault();
-          $("#ordersMade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+          $("#ordersMade").append('<tr><td id="nameOfPizza">'+newOrder.name +'</td><td id="sizeOfPizza">' + newOrder.size + '</td><td id="crustOfPizza">'+newOrder.crust + '</td><td id="toppingOfPizza">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
           console.log(newOrder);
     
         });
@@ -158,7 +158,7 @@ $(document).ready(function(){
         $("button#pickUp").show();
         $("button#deliver").show();
         console.log("Your total bills is sh. "+checkoutTotal);
-        $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
+        $("#theTotal").append("Your bill is sh. "+checkoutTotal);
       });
 
       $("button#deliver").click(function(){
@@ -179,7 +179,7 @@ $(document).ready(function(){
       })
   
       $("button#goDeliver").click(function(){
-        $("#notify").show();
+        $("#notification").show();
         var owner = document.getElementById("ownerOrder").value;
         var location = document.getElementById("ownerLocation").value;
         alert("Hey " + owner + " ,your order has been received and will be delivered to " + location + ". Be ready with ksh" + checkoutTotal + " and ksh100 for the delivery fee!!" );

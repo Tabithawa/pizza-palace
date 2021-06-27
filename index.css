@@ -10,7 +10,7 @@ h1{
 .welcome{
     font-weight: bolder;
 }
-.desc{
+.motto{
     text-align: center;
     font-style: italic;
 }
@@ -34,13 +34,13 @@ img{
 .prices{
     margin-top: 50px;
 }
-.orderHead{
+.orderHeading{
     color: orange;
     font-weight: bolder;
     margin-top: 50px;
 }
 
-#partTwo{
+#orderPart{
     display: none;
 }
 .orderh2{
@@ -50,7 +50,7 @@ img{
 table, th, td {
     border: 1px solid white;
 }
-#notify{
+#notification{
     display: none;
 }
 #deliver{

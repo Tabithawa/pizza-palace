@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1 class="welcome">🍕Welcome to pizza palace.🍕</h1>
-    <p class="desc">The place to be for all your pizza cravings!!</p>
+    <p class="motto">The place to be for all your pizza cravings!!</p>
    <h1 class="menu">Menu</h1>
     <div class="container row">
         <div class="col-md-3">
@@ -45,8 +45,8 @@
                 <p>Delivery = ksh 100</p>
         </div>
         <div>
-            <h2 class="orderHead" >Make an order below:</h2>
-            <div class="mainForm col-md-5">
+            <h2 class="orderHeading" >Make an order below:</h2>
+            <div class="col-md-5">
                 <form>
                     <label for="pizza">Pizza type:</label>
                     <select id="pizzaName">
@@ -73,12 +73,12 @@
                         <option value="Extra Cheese">Extra Cheese</option>
                     </select>
                     <br><br>
-                    <button class="order" type="submit">Order</button>
+                    <button id="order" type="submit">Order</button>
                 </form>
                 <br>
             </div>
-            <div id="partTwo">
-                <div class=" choise">
+            <div id="orderPart">
+                <div>
                     <h2 class="orderh2">Your Order is:</h2>
                     <div >
                         <table>
@@ -93,16 +93,15 @@
                             </thead>
                             <tbody id="ordersMade">
                                 <tr>
-                                    <td id="pizzaname"></td>
-                                    <td id="pizzasize"></td>
-                                    <td id="pizzacrust"></td>
-                                    <td id="pizzatopping"></td>
+                                    <td id="nameOfPizza"></td>
+                                    <td id="sizeOfPizza"></td>
+                                    <td id="crustOfPizza"></td>
+                                    <td id="toppingOfPizza"></td>
                                     <td id="totals"></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p id="pizzatotal"></p>
-                        <p id="totalbill"></p> 
+                        <p id="theTotal"></p> 
                     </div>
                     <button id="addPizza">Add Pizza</button>
                     <button id="checkout">Checkout</button><br><br>
@@ -111,7 +110,7 @@
                 </div>
                 <br>
                 <div class="deliveryForm">
-                    <p id="notify">Your order will be ready in 10 minutes!!</p>
+                    <p id="notification">Your order will be ready in 10 minutes!!</p>
                     <form class="checkoutForm">
                         <label>Fill the details below:</label><br>
                         <input type="text" id="ownerOrder" placeholder="Your Name" required><br><br>
