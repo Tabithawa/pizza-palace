@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  
     //ORDER BUTTON
     $("button#order").click(function(event){
       $("button#order").hide();
@@ -62,13 +61,13 @@ $(document).ready(function(){
       document.getElementById("totals").innerHTML = checkoutTotal;
 
       //ADD PIZZA BUTTON AND ITS OWN DATA
-      $("button#addPizza").click(function(event){
+    $("button#addPizza").click(function(event){
         var pizzaType = $("#pizzaName option:selected").val();
         var pizzaSize = $("#size option:selected").val();
         var pizzaCrust = $("#crust option:selected").val();
         var pizzaTopping = $("#topping option:selected").val();
 
-        switch(pizzaSize){
+          switch(pizzaSize){
             case "Small":
                sizeCost = 500;
              break;
@@ -112,28 +111,26 @@ $(document).ready(function(){
           checkoutTotal = checkoutTotal + totalCost;
           console.log(checkoutTotal);
 
-          function Getpizza( name,size,crust,topping, total ){
+          function customerOrder( name , size , crust , topping , total ){
             this.name = name;
             this.size = size;
             this.crust = crust;
             this.topping = topping;
             this.total = total;
-          }
+          };
     
-          var newOrder = new Getpizza(pizzaType, pizzaSize, pizzaCrust,pizzaTopping,total);
+          var addOrder = new customerOrder(pizzaType, pizzaSize, pizzaCrust,pizzaTopping,totalCost);
           event.preventDefault();
-          $("#ordersMade").append('<tr><td id="nameOfPizza">'+newOrder.name +'</td><td id="sizeOfPizza">' + newOrder.size + '</td><td id="crustOfPizza">'+newOrder.crust + '</td><td id="toppingOfPizza">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
-          console.log(newOrder);
+          $("#ordersAdded").append('<tr><td id="nameOfPizza">'+ addOrder.name +'</td><td id="sizeOfPizza">' + addOrder.size + '</td><td id="crustOfPizza">'+addOrder.crust + '</td><td id="toppingOfPizza">'+addOrder.topping+'</td><td id="totals">'+addOrder.total+'</td></tr>');
     
-        });
+    });
             //CHECKOUT BUTTON
-    $("button#checkout").click(function(){ 
+      $("button#checkout").click(function(){ 
         $("button#checkout").hide();
         $("button#addPizza").hide();
         $("button#pickUp").show();
         $("button#deliver").show();
-        console.log("Your total bills is sh. "+checkoutTotal);
-        $("#theTotal").append("Your bill is sh. "+checkoutTotal);
+        $("#theTotal").append("Your total bill is Ksh. "+checkoutTotal);
       });
 
       $("button#deliver").click(function(){
@@ -141,25 +138,19 @@ $(document).ready(function(){
         $(".deliveryForm").show();
       })
   
-  
-  
       $("button#pickUp").click(function(){
         alert("Your are welcome to pick up your order in 10 minutes and have ksh" + checkoutTotal + " to pay for the pizza");
         $("button#pickUp").hide();
         $("button#deliver").hide();
         //reloads the page
         location.reload();
-  
-  
       })
   
       $("button#goDeliver").click(function(){
         $("#notification").show();
-        var owner = document.getElementById("ownerOrder").value;
-        var location = document.getElementById("ownerLocation").value;
-        alert("Hey " + owner + " ,your order has been received and will be delivered to " + location + ". Be ready with ksh" + checkoutTotal + " and ksh100 for the delivery fee!!" );
+        var customer = document.getElementById("customerName").value;
+        var location = document.getElementById("customerLocation").value;
+        alert("Hey " + customer + " ,your order has been received and will be delivered to " + location + " in 15 minutes . Be ready with ksh" + checkoutTotal + " and ksh100 for the delivery fee!!" );
       })
-  
-  
-    })
   })
+})
