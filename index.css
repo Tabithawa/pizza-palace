@@ -7,3 +7,10 @@ h1{
     text-align: center;
     color: orange;
 }
+.welcome{
+    font-weight: bolder;
+}
+.desc{
+    text-align: center;
+    font-style: italic;
+}
