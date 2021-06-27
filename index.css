@@ -14,3 +14,16 @@ h1{
     text-align: center;
     font-style: italic;
 }
+.menu{
+    text-align: center;
+    color: orange;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.row{
+    margin-left: 180px;
+}
+img{
+    width: 100px;
+    border-radius: 30%;
+}
