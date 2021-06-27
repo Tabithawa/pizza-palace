@@ -27,3 +27,10 @@ img{
     width: 100px;
     border-radius: 30%;
 }
+.prices h2{
+    font-weight: bolder;
+    color: orange;
+}
+.prices{
+    margin-top: 50px;
+}
