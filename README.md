@@ -1,5 +1,4 @@
 # Pizza Palace
-#### The website is used to order pizza
 #### By **Tabithawa**
 ## Description
  The web application can be used by a restaurant where cutsomers can order pizza through it.
