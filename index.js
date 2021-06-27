@@ -10,60 +10,48 @@ $(document).ready(function(){
       var pizzaTopping = $("#topping option:selected").val();
 
       switch(pizzaSize){
-        case "0":
-          price =0;
-        break;
-        case "Large":
-           price = 1500;
-           console.log(price);
+        case "Small":
+           sizeCost = 500;
          break;
          case "Medium":
-           price = 1000;
-           console.log("The price is "+price);
+           sizeCost = 1000;
          break;
-         case "Small":
-           price = 500;
-           console.log(price);
+         case "Large":
+           sizeCost = 1500;
          default:
-           console.log("error"); 
+           alert("Choose a size"); 
        }
        switch(pizzaCrust){
-          case "0":
-            crust_price = 0;
-          break;
           case "Crispy":
-            crust_price = 50;
+            crustCost = 50;
           break;
           case "Stuffed":
-            crust_price = 150;
+            crustCost = 150;
           break;
           case "Gluten-Free":
-            crust_price = 200;
+            crustCost = 200;
           break;
           default:
-            console.log("No price"); 
+            alert("Select a crust"); 
         }
         switch(pizzaTopping){
-          case "0":
-            topping_price = 0;
-          break;
           case "Sausage":
-            topping_price = 50;
+            toppingCost = 50;
           break;
           case "Mushrooms":
-            topping_price = 50;
+            toppingCost = 50;
           break;
           case "Extra Cheese":
-            topping_price = 50;
+            toppingCost = 50;
           break;
           default:
-            console.log("No price"); 
+            alert("Choose a topping"); 
         }
   
-      var total = price + crust_price + topping_price;
-      console.log(total);
-      let checkoutTotal =0;
-      checkoutTotal = checkoutTotal + total;
+      var totalCost = sizeCost + crustCost + toppingCost;
+      console.log(totalCost);
+      let checkoutTotal = 0;
+      checkoutTotal = checkoutTotal + totalCost;
   
   
       event.preventDefault();
@@ -73,68 +61,55 @@ $(document).ready(function(){
       document.getElementById("toppingOfPizza").innerHTML = pizzaTopping;
       document.getElementById("totals").innerHTML = checkoutTotal;
 
-          //ADD PIZZA BUTTON AND ITS OWN DATA
-    $("button#addPizza").click(function(event){
+      //ADD PIZZA BUTTON AND ITS OWN DATA
+      $("button#addPizza").click(function(event){
         var pizzaType = $("#pizzaName option:selected").val();
         var pizzaSize = $("#size option:selected").val();
         var pizzaCrust = $("#crust option:selected").val();
         var pizzaTopping = $("#topping option:selected").val();
 
         switch(pizzaSize){
-            case "0":
-              price =0;
-            break;
-            case "Large":
-               price = 1500;
-               console.log(price);
+            case "Small":
+               sizeCost = 500;
              break;
              case "Medium":
-               price = 1000;
-               console.log("The price is "+price);
+               sizeCost = 1000;
              break;
              case "Small":
-               price = 500;
-               console.log(price);
+               sizeCost = 1500;
              default:
-               console.log("error"); 
+               console.log("Choose a size"); 
            }
            switch(pizzaCrust){
-              case "0":
-                crust_price = 0;
-              break;
               case "Crispy":
-                crust_price = 50;
+                crustCost = 50;
               break;
               case "Stuffed":
-                crust_price = 150;
+                crustCost = 150;
               break;
               case "Gluten-Free":
-                crust_price = 200;
+                crustCost = 200;
               break;
               default:
-                console.log("No price"); 
+                console.log("Select a crust"); 
             }
             switch(pizzaTopping){
-              case "0":
-                topping_price = 0;
-              break;
               case "Sausage":
-                topping_price = 50;
+                toppingCost = 50;
               break;
               case "Mushrooms":
-                topping_price = 50;
+                toppingCost = 50;
               break;
               case "Extra Cheese":
-                topping_price = 50;
+                toppingCost = 50;
               break;
               default:
-                console.log("No price"); 
+                console.log("Choose a topping"); 
             }
       
-          var total = price + crust_price + topping_price;
-          console.log(total);
-    
-          checkoutTotal = checkoutTotal + total;
+          var totalCost = sizeCost + crustCost + toppingCost;
+          console.log(totalCost);
+          checkoutTotal = checkoutTotal + totalCost;
           console.log(checkoutTotal);
 
           function Getpizza( name,size,crust,topping, total ){
