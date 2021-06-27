@@ -72,3 +72,10 @@ $(document).ready(function(){
       document.getElementById("pizzacrust").innerHTML = pizzaCrust;
       document.getElementById("pizzatopping").innerHTML = pizzaTopping;
       document.getElementById("totals").innerHTML = checkoutTotal;
+
+          //ADD PIZZA BUTTON AND ITS OWN DATA
+    $("button#addPizza").click(function(event){
+        var pizzaType = $("#pizzaName option:selected").val();
+        var pizzaSize = $("#size option:selected").val();
+        var pizzaCrust = $("#crust option:selected").val();
+        var pizzaTopping = $("#topping option:selected").val();
