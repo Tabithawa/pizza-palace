@@ -2,6 +2,8 @@
 #### By **Tabithawa**
 ## Description
  The web application can be used by a restaurant where cutsomers can order pizza through it.
+### The link to view the website
+https://tabithawa.github.io/pizza-palace/
 ## Setup/Installation Requirements
 * Have reliable network connection
 * Fork or clone the repository
