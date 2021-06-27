@@ -48,25 +48,25 @@
             <h2 class="orderHead" >Make an order below:</h2>
             <div class="mainForm col-md-5">
                 <form>
-                    <label for="pizza">Pizza type</label>
+                    <label for="pizza">Pizza type:</label>
                     <select id="pizzaName">
                         <option value="Cheese Pizza">Cheese Pizza</option>
                         <option value="Pepperoni Pizza">Pepperoni Pizza</option>
                         <option value="Vegetable Pizza">Vegetable Pizza</option>
                     </select><br>
-                    <label for="size">Pizza size </label>
+                    <label for="size">Pizza size :</label>
                     <select id="size">
                         <option value="Small">Small</option>
                         <option value="Medium">Medium</option>
                         <option value="Large">Large</option>
                     </select><br>
-                    <label for="Crust">Crust type</label>
+                    <label for="Crust">Crust type:</label>
                     <select id="crust">
                         <option value="Gluten-Free">Gluten Free</option>
                         <option value="Crispy">Crispy</option>
                         <option value="Stuffed">Stuffed</option>
                     </select><br>
-                    <label for="Topping">Topping</label>
+                    <label for="Topping">Topping:</label>
                     <select id="topping">
                         <option value="Sausage">Sausage</option>
                         <option value="Mushrooms">Mushrooms</option>
@@ -108,6 +108,17 @@
                     <button id="checkout">Checkout</button><br><br>
                     <button id="deliver">Home Delivery?</button>
                     <button id="pickUp">Pick at the restaurant</button>
+                </div>
+                <br>
+                <div class="deliveryForm">
+                    <p id="notify">Your order will be ready in 10 minutes!!</p>
+                    <form class="checkoutForm">
+                        <label>Fill the details below:</label><br>
+                        <input type="text" id="ownerOrder" placeholder="Your Name" required><br><br>
+                        <input type="number" placeholder="Phone Number 07..." minlength="10" maxlength="10" required><br><br>
+                        <input type="text" id="ownerLocation" placeholder="Your Location" required><br><br>
+                        <button id="goDeliver">Order Delivery</button>
+                    </form>
                 </div>
             
 
