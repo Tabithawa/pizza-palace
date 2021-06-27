@@ -50,3 +50,20 @@ img{
 table, th, td {
     border: 1px solid white;
 }
+#notify{
+    display: none;
+}
+#deliver{
+    display: none;
+}
+#pickUp{
+    display: none;
+}
+.deliveryForm{
+    display: none;
+    text-align: center;
+}
+.checkoutForm{
+    background-color: gray;
+    padding: 20px;
+}
